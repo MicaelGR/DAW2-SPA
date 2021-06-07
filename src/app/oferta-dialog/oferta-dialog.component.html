@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>Añadir Oferta</h1>
+<div mat-dialog-content>
+  <p>Puesto</p>
+  <mat-form-field>
+    <input matInput placeholder="Puesto" [(ngModel)]="oferta.puesto" />
+  </mat-form-field>
+  <p>Empresa</p>
+  <mat-form-field>
+    <input matInput placeholder="Empresa" [(ngModel)]="oferta.empresa" />
+  </mat-form-field>
+  <p>Teléfono</p>
+  <mat-form-field>
+    <input matInput placeholder="Teléfono" [(ngModel)]="oferta.telefono" />
+  </mat-form-field>
+  <p>Email</p>
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="oferta.email" />
+  </mat-form-field>
+  <p>Dirección</p>
+  <mat-form-field>
+    <input matInput placeholder="Dirección" [(ngModel)]="oferta.direccion" />
+  </mat-form-field>
+  <p>Sueldo</p>
+  <mat-form-field>
+    <input matInput placeholder="Sueldo" [(ngModel)]="oferta.sueldo" />
+  </mat-form-field>
+  <p>Notas</p>
+  <mat-form-field>
+    <input matInput placeholder="Notas" [(ngModel)]="oferta.notas" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="oferta" cdkFocusInitial>
+    Añadir
+  </button>
+</div>

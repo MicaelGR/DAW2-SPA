@@ -1,0 +1,20 @@
+<div fxLayout="column" fxLayoutAlign="start stretch">
+  <div fxFlex="90%" fxFlex.md="50%" fxFlex.gt-md="90%">
+    <header>
+      <mat-toolbar class="mtoolbar">
+        <a mat-button routerLink="/inicio">
+          <mat-icon>home</mat-icon>
+        </a>
+        <span class="fill-space"></span>
+        <a mat-button routerLink="/entrevistas">Gestor de Entrevistas</a>
+        <div *ngIf="!(afAuth.authState | async); else logged">
+          <a mat-button routerLink="/login">Inicia Sesión</a>
+          <a mat-button routerLink="/register">Regístrate</a>
+        </div>
+        <ng-template #logged>
+          <a mat-button (click)="afAuth.signOut()">Cerrar sesión</a>
+        </ng-template>
+      </mat-toolbar>
+    </header>
+  </div>
+</div>

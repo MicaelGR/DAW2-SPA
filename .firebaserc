@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "daw2-2b8f7"
+  },
+  "targets": {
+    "daw2-2b8f7": {
+      "hosting": {
+        "spa-ge": [
+          "daw2-2b8f7"
+        ]
+      }
+    }
+  }
+}

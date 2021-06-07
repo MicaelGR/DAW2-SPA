@@ -1,0 +1,21 @@
+.matcard {
+  background-color: rgb(66, 165, 127);
+  max-width: 100%;
+  width: 300px;
+  cursor: move;
+}
+.card-section p {
+  white-space: pre-line;
+  border-spacing: 5 10;
+  border-bottom: 1px solid rgb(55, 146, 20);
+}
+.card-section p b {
+  text-shadow: 1px 1px black;
+}
+.card-title {
+  text-align: center;
+}
+.edit-buttons {
+  padding: 0;
+  text-align: right;
+}

@@ -1,0 +1,35 @@
+<mat-card *ngIf="oferta" class="matcard">
+  <mat-card-title class="card-title">
+    {{ oferta.puesto }}
+  </mat-card-title>
+  <mat-card-content>
+    <span class="card-section">
+      <p><b>Empresa: </b>{{ oferta.empresa }}</p>
+    </span>
+    <span class="card-section">
+      <p><b>Teléfono: </b>{{ oferta.telefono }}</p>
+    </span>
+    <span class="card-section">
+      <p><b>Email: </b>{{ oferta.email }}</p>
+    </span>
+    <span class="card-section">
+      <p><b>Dirección: </b>{{ oferta.direccion }}</p>
+    </span>
+    <span class="card-section">
+      <p><b>Sueldo: </b>{{ oferta.sueldo }}</p>
+    </span>
+    <span class="card-section">
+      <p><b>Notas: </b>{{ oferta.notas }}</p>
+    </span>
+  </mat-card-content>
+  <mat-card-footer class="footer">
+    <mat-card-actions class="edit-buttons">
+      <a mat-button (click)="editDialog()">
+        <mat-icon>edit</mat-icon>
+      </a>
+      <a mat-button (click)="delete()">
+        <mat-icon>delete</mat-icon>
+      </a>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>

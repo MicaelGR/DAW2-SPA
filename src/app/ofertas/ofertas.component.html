@@ -1,0 +1,71 @@
+<div cdkDropListGroup class="container">
+  <h1>Gestor de entrevistas de trabajo</h1>
+
+  <mat-card class="cards">
+    <mat-card-title class="matcard-title">
+      <div class="matform">
+        <mat-form-field class="mat-form-field" appearance="standard">
+          <input matInput [(ngModel)]="stageTitle1">
+          <mat-icon class="edit-icon" matSuffix>edit</mat-icon>
+        </mat-form-field>
+      </div>
+    </mat-card-title>
+    <mat-card-content class="matcard-content">
+      <div class="matcard-items">
+        <div cdkDropList [id]="stage1list" *ngIf="(stage1$ | async) as stage1" class="matcard-list"
+          [cdkDropListData]="(stage1$ | async)" [cdkDropListOrientation]="orientation"
+          (cdkDropListDropped)="drop($event)">
+          <app-oferta class="matcard-item" *ngFor="let item of stage1" [oferta]="item" cdkDrag>
+          </app-oferta>
+          <div class="matcard-placeholder-item">
+            <button mat-raised-button cdkDragDisabled (click)="openBoardDialog()">
+              Añadir oferta
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="cards">
+    <mat-card-title class="matcard-title">
+      <div class="matform">
+        <mat-form-field class="mat-form-field" appearance="standard">
+          <input matInput [(ngModel)]="stageTitle2">
+          <mat-icon class="edit-icon" matSuffix>edit</mat-icon>
+        </mat-form-field>
+      </div>
+    </mat-card-title>
+    <mat-card-content class="matcard-content">
+      <div class="matcard-items">
+        <div cdkDropList [id]="stage2list" *ngIf="(stage2$ | async) as stage2" class="matcard-list"
+          [cdkDropListData]="(stage2$  | async)" [cdkDropListOrientation]="orientation"
+          (cdkDropListDropped)="drop($event)">
+          <app-oferta class="matcard-item" *ngFor="let item of stage2" [oferta]="item" cdkDrag>
+          </app-oferta>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="cards">
+    <mat-card-title class="matcard-title">
+      <div class="matform">
+        <mat-form-field class="mat-form-field" appearance="standard">
+          <input matInput [(ngModel)]="stageTitle3">
+          <mat-icon class="edit-icon" matSuffix>edit</mat-icon>
+        </mat-form-field>
+      </div>
+    </mat-card-title>
+    <mat-card-content class="matcard-content">
+      <div class="matcard-items">
+        <div cdkDropList *ngIf="(stage3$ | async) as stage3" [id]="stage3list" class="matcard-list"
+          [cdkDropListData]="(stage3$ | async)" [cdkDropListOrientation]="orientation"
+          (cdkDropListDropped)="drop($event)">
+          <app-oferta class="matcard-item" *ngFor="let item of stage3" [oferta]="item" cdkDrag>
+          </app-oferta>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

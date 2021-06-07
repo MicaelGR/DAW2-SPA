@@ -1,0 +1,15 @@
+.mtoolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(44, 45, 49);
+}
+.mat-toolbar-single-row {
+  height: 3em;
+}
+.fill-space {
+  flex: 1 1 auto;
+}
+a {
+  margin-left: 1em;
+}
